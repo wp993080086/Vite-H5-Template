@@ -1,24 +1,26 @@
 <div align=center>
   
-![Vite](https://img.shields.io/badge/2.9.5-Vite-orange)
-![TypeScript](https://img.shields.io/badge/4.4.0-TypeScript-lightgrey)
-![Vue](https://img.shields.io/badge/3.2.33-Vue-brightgreen)
-![Axios](https://img.shields.io/badge/0.26.1-Axios-ff69b4)
-![Vue-Router](https://img.shields.io/badge/4.0.14-Vue%20Router-blueviolet)
+![pinia](https://img.shields.io/badge/2.0.13-pinia-yellow)
+![vant](https://img.shields.io/badge/3.4.9-vant-409EFF)
+![sass](https://img.shields.io/badge/1.50.1-sass-orange)
   
 </div>
+
 <div align=center>
   
-![Pinia](https://img.shields.io/badge/2.0.13-Pinia-yellow)
-![Vant](https://img.shields.io/badge/3.4.9-Vant-409EFF)
-![Nprogress](https://img.shields.io/badge/0.2.0-Nprogress-red)
-![Sass](https://img.shields.io/badge/1.50.1-Sass-orange)
+![nprogress](https://img.shields.io/badge/0.2.0-nprogress-red)
+![vite](https://img.shields.io/badge/2.9.5-vite-orange)
+![typeScript](https://img.shields.io/badge/4.4.0-typeScript-lightgrey)
+![vue](https://img.shields.io/badge/3.2.33-vue-brightgreen)
+![axios](https://img.shields.io/badge/0.26.1-axios-ff69b4)
+![vue-router](https://img.shields.io/badge/4.0.14-vue%20router-blueviolet)
   
 </div>
 
 # ⚡️ 简介
 
-一个开箱即用的 `Vite 2` + `Vue 3` + `Vant` + `Pinia` + `Vue-Router 4` 的移动端H5项目模板，搭配有 `eslint` 代码检查修复，`git` 推送检查钩子 `Husky`。
+一个开箱即用，基于 `vite 2` + `vue 3` + `vant` + `pinia` + `vue-router 4` 的移动端H5项目模板。
+
 
 # 🚀 开发
 

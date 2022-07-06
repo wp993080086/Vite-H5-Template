@@ -8,7 +8,7 @@ export type THaveCode = {
   message: string
 }
 
-export type TParams = TDict<TAny> | undefined | null
+export type TParams = TDictObj<TAny> | undefined | null
 
 export type TRequestType = 'get' | 'post'
 

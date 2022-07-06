@@ -8,9 +8,12 @@ module.exports = {
     amd: true
   },
   globals: {
-    TDict: true,
+    TDictObject: true,
+    TDictArray: true,
+    TDictArr: true,
     TAnyType: true,
     TAnyArray: true,
+    TAnyFunc: true,
     TAny: true,
     defineProps: 'readonly',
     defineEmits: 'readonly',

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HelloWorld from '@/components/helloWorld.vue'
+import Box from '@/components/layout/container'
 import { storeToRefs } from 'pinia'
 import appStore from '@/store'
 import Loading from '@/utils/loading'
@@ -20,6 +21,7 @@ const t = () => {
 <template>
   <div class="home_box">
     <HelloWorld msg="Hello Vite" />
+    <Box />
     <p @click="t">{{ userInfo.userName }}</p>
   </div>
 </template>

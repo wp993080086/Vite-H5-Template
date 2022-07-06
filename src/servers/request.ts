@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
 import qs from 'qs'
 import Module from './module'
-import { errorCode } from '@/config'
+import { errorCode, baseRouter } from '@/config'
 import Toast from '@/utils/toast'
 import { getToken } from '@/servers/token'
 import { TQueryType, THaveCode, TParams, TRequestType, THttpResponse } from './request.d'
@@ -56,9 +56,12 @@ instance.interceptors.response.use(
     if (key !== errorCode.SUCCESS) {
       if (key === errorCode.EXPIRE) {
         sessionStorage.removeItem('userInfo')
-        Toast.info('登录状态过期，请重新登录 !')
+        sessionStorage.removeItem('userDetails')
+        Toast.alert('登录状态过期，请重新登录 !', '温馨提示', { showClose: false }).then(() => {
+          window.location.href = baseRouter.LOGIN
+        })
       }
-      return Toast.fail(data.message)
+      return Toast.warn(data.message)
     }
     return data
   },
@@ -67,7 +70,7 @@ instance.interceptors.response.use(
     try {
       const errorInfo = error.response
       const status = (errorInfo.status || 0) * 1
-      Toast.fail(errorInfo.data.message)
+      Toast.error(errorInfo.data.message)
       switch (status) {
         case 400:
           console.error('400 服务器不理解该请求 ！')
@@ -86,7 +89,7 @@ instance.interceptors.response.use(
       }
       return Promise.reject(errorInfo)
     } catch (e) {
-      Toast.fail('网络开小差啦 ！')
+      Toast.error('网络开小差啦 ！')
       return Promise.reject(new Error('网络开小差啦 ！'))
     }
   }
@@ -111,7 +114,7 @@ export default {
   async get<T = TAny>(
     module: Module,
     path: string,
-    data?: TDict<TAny>,
+    data?: TDictObj<TAny>,
     config?: Partial<AxiosRequestConfig>
   ) {
     const url = makeUrl('get', module, path, data)
@@ -120,7 +123,7 @@ export default {
   async post<T = TAny>(
     module: Module,
     path: string,
-    data?: TDict<TAny> | null,
+    data?: TDictObj<TAny> | null,
     config?: Partial<AxiosRequestConfig>
   ) {
     const url = makeUrl('post', module, path, data)

@@ -1,11 +1,3 @@
-type Procedure = (...args: TAny[]) => TAny
-interface ThrottleFunction<F extends Procedure> {
-  (this: ThisParameterType<F>, ...args: Parameters<F>): void
-}
-interface DebounceFunction<F extends Procedure> {
-  (this: ThisParameterType<F>, ...args: Parameters<F>): void
-  cancel: () => void
-}
 /**
  * 返回数据类型
  * @param  {String} value 数据类型 比如 returnType(false) 返回 'Boolean'
@@ -120,4 +112,12 @@ export const createUuid = (prefix = 'pdd') => {
     return (res === 'x' ? Random : (Random & 0x3) | 0x8).toString(16)
   })
   return `${prefix}_${uuid}`
+}
+type Procedure = (...args: TAny[]) => TAny
+interface ThrottleFunction<F extends Procedure> {
+  (this: ThisParameterType<F>, ...args: Parameters<F>): void
+}
+interface DebounceFunction<F extends Procedure> {
+  (this: ThisParameterType<F>, ...args: Parameters<F>): void
+  cancel: () => void
 }

@@ -19,7 +19,7 @@
 
 # ⚡️ 简介
 
-一个开箱即用，基于 `vite 2` + `typeScript` +  `vue 3` + `vant` + `pinia` + `vue-router 4` + `axios` 的H5项目模板。
+一个开箱即用，基于 `vite 2` + `typeScript` +  `vue 3` + `vant 3` + `pinia` + `vue-router 4` + `axios` 的H5项目模板。
 
 
 # 🚀 开发

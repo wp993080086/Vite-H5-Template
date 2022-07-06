@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "author": {
     "name": "鹏多多",
-    "email": "993080086@qq.com"
+    "email": "993080086@qq.com",
+    "url": "https://github.com/wp993080086"
   },
   "scripts": {
     "serve": "vite --mode development",

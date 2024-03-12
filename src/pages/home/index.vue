@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import HelloWorld from '@/components/helloWorld.vue'
+import HelloWorld from '@/components/hello-world.vue'
 import Box from '@/components/layout/container'
 import { storeToRefs } from 'pinia'
 import appStore from '@/store'

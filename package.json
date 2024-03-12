@@ -22,9 +22,9 @@
     "nprogress": "^0.2.0",
     "qs": "^6.10.3",
     "vue": "^3.2.37",
-    "pinia": "^2.0.14",
-    "axios": "^0.27.2",
-    "vue-router": "^4.0.16",
+    "pinia": "^2.1.4",
+    "axios": "^1.4.0",
+    "vue-router": "^4.2.2",
     "vant": "^3.5.2"
   },
   "devDependencies": {
@@ -47,8 +47,8 @@
     "rollup-plugin-external-globals": "^0.6.1",
     "sass": "^1.50.1",
     "sass-loader": "^12.6.0",
-    "typescript": "~4.4.0",
-    "vite": "^2.9.13",
+    "typescript": "^4.6.2",
+    "vite": "^4.3.9",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-html": "^3.2.0",
     "vite-plugin-style-import": "^2.0.0",
